@@ -1,0 +1,16 @@
+type Film {
+  id: ID!
+  title: String!
+  director: String!
+  year: Int!
+}
+
+type Query {
+  film(id: ID!): Film
+  films: [Film]
+}
+
+type Mutation {
+  addFilm(title: String!, director: String!, year: Int!): Film
+  updateFilm(id: ID!, title: String, director: String, year: Int): Film
+}
